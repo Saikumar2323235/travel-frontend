@@ -1,0 +1,381 @@
+/* ================= GLOBAL ================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Segoe UI',sans-serif;
+  min-height:100vh;
+  background:linear-gradient(135deg,#eff6ff,#f8fafc,#dbeafe);
+  color:#0f172a;
+}
+
+a{
+  text-decoration:none;
+}
+
+main{
+  width:90%;
+  max-width:1200px;
+  margin:30px auto;
+}
+
+h1{
+  margin-bottom:20px;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+  background:linear-gradient(135deg,#0f172a,#1d4ed8,#0284c7);
+  padding:20px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 10px 30px rgba(37,99,235,.25);
+}
+
+nav a{
+  color:white;
+  font-weight:600;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#bfdbfe;
+}
+
+/* ================= BUTTONS ================= */
+
+.add-btn,
+.submit-btn,
+.auth-btn{
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  color:white;
+  font-weight:700;
+  background:linear-gradient(135deg,#2563eb,#06b6d4);
+  transition:.3s;
+}
+
+.add-btn{
+  display:inline-block;
+  padding:14px 22px;
+  margin-bottom:25px;
+}
+
+.submit-btn,
+.auth-btn{
+  width:100%;
+  padding:15px;
+}
+
+.add-btn:hover,
+.submit-btn:hover,
+.auth-btn:hover{
+  transform:translateY(-3px);
+}
+
+/* ================= DESTINATIONS ================= */
+
+.destinations{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.card h3{
+  padding:15px 20px 5px;
+}
+
+.card p{
+  padding:4px 20px;
+  color:#64748b;
+}
+
+/* ================= CARD INFO ================= */
+
+.card-info{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  padding:15px;
+}
+
+.info-box{
+  background:#f1f5f9;
+  padding:10px;
+  border-radius:10px;
+  text-align:center;
+}
+
+.info-box span{
+  display:block;
+  font-size:13px;
+  color:#64748b;
+}
+
+.info-box strong{
+  color:#0f172a;
+}
+
+/* ================= BUDGET ================= */
+
+.budget-low{
+  background:#dcfce7;
+  color:#166534;
+}
+
+.budget-medium{
+  background:#fef3c7;
+  color:#92400e;
+}
+
+.budget-high{
+  background:#fee2e2;
+  color:#991b1b;
+}
+
+.budget-low,
+.budget-medium,
+.budget-high{
+  padding:5px 10px;
+  border-radius:20px;
+}
+
+/* ================= ACTIONS ================= */
+
+.card-actions{
+  display:flex;
+  gap:10px;
+  padding:15px;
+}
+
+.view-btn,
+.edit-btn,
+.delete-btn{
+  flex:1;
+  border:none;
+  padding:10px;
+  border-radius:8px;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.view-btn{
+  background:#2563eb;
+}
+
+.edit-btn{
+  background:#16a34a;
+}
+
+.delete-btn{
+  background:#dc2626;
+}
+
+/* ================= DETAILS ================= */
+
+.details{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.details img{
+  width:100%;
+  height:450px;
+  object-fit:cover;
+  border-radius:15px;
+  margin-bottom:25px;
+}
+
+.details h3{
+  color:#2563eb;
+  margin-top:20px;
+}
+
+.details p{
+  color:#475569;
+  line-height:1.8;
+}
+
+/* ================= FORM ================= */
+
+.form-container{
+  max-width:700px;
+  margin:auto;
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.form-container input,
+.form-container textarea{
+  width:100%;
+  padding:15px;
+  margin-bottom:18px;
+  border:2px solid #e2e8f0;
+  border-radius:12px;
+}
+
+.form-container textarea{
+  min-height:120px;
+}
+
+/* ================= AUTH ================= */
+
+.auth-container{
+  min-height:70vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.auth-card{
+  width:100%;
+  max-width:450px;
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.auth-card input{
+  width:100%;
+  padding:15px;
+  margin-bottom:18px;
+  border:2px solid #e2e8f0;
+  border-radius:12px;
+}
+
+/* ================= FAVORITES ================= */
+
+.favorite-btn{
+  width:100%;
+  padding:10px;
+  background:#ff6b35;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.favorite-btn:hover{
+  background:#ea580c;
+}
+
+.favorites-container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+.page-title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.favorites-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:25px;
+}
+
+.favorite-card{
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.favorite-card:hover{
+  transform:translateY(-6px);
+}
+
+.favorite-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.favorite-content{
+  padding:18px;
+}
+
+.favorite-content h2{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.favorite-content p{
+  margin:8px 0;
+  color:#64748b;
+}
+
+.favorite-content button{
+  width:100%;
+  padding:12px;
+  margin-top:15px;
+  border:none;
+  border-radius:8px;
+  background:crimson;
+  color:white;
+  cursor:pointer;
+}
+
+.favorite-content button:hover{
+  background:darkred;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+nav{
+  flex-direction:column;
+  gap:15px;
+}
+
+.card-info{
+  grid-template-columns:1fr;
+}
+
+.details img{
+  height:300px;
+}
+
+.favorites-grid{
+  grid-template-columns:1fr;
+}
+
+}

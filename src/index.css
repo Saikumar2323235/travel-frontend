@@ -1,0 +1,213 @@
+.destination-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.destination-page h1 {
+  font-size: 38px;
+  color: #111827;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* FILTERS */
+
+.filters {
+  display: flex;
+  gap: 15px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filters input,
+.filters select {
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+  background: white;
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.2);
+}
+
+/* GRID */
+
+.destination-list,
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+
+.destination-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.destination-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.18);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.destination-card h2 {
+  padding: 15px 20px 5px;
+  font-size: 24px;
+  color: #0f172a;
+}
+
+.destination-card p {
+  padding: 5px 20px;
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* BUDGET / CATEGORY STYLE */
+
+.destination-card .budget,
+.destination-card .category {
+  display: inline-block;
+  margin: 8px 0 8px 20px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.destination-card .budget {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.destination-card .category {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .destination-page {
+    padding: 20px;
+  }
+
+  .destination-page h1 {
+    font-size: 30px;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%;
+  }
+}
+
+/* ===== DESTINATIONS PAGE ===== */
+
+.add-destination-link {
+  display: inline-block;
+  margin: 25px 0 20px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.add-destination-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+}
+
+/* FILTERS */
+
+.Filters {
+  background: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.Filters input,
+.Filters select {
+  width: 100%;
+  padding: 13px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  outline: none;
+  font-size: 15px;
+  background: #f8fafc;
+  color: #0f172a;
+  transition: 0.3s;
+}
+
+.Filters input:focus,
+.Filters select:focus {
+  border-color: #2563eb;
+  background: white;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.15);
+}
+
+/* TITLE */
+
+h1 {
+  font-size: 34px;
+  color: #0f172a;
+  margin-bottom: 25px;
+}
+
+/* DESTINATION GRID */
+
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .Filters {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .Filters {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+}
